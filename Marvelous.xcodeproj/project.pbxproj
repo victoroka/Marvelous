@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		848249F626D6E7E60087E673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848249F426D6E7E60087E673 /* LaunchScreen.storyboard */; };
 		84824A0126D6E7E70087E673 /* MarvelousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84824A0026D6E7E70087E673 /* MarvelousTests.swift */; };
 		84824A0C26D6E7E70087E673 /* MarvelousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84824A0B26D6E7E70087E673 /* MarvelousUITests.swift */; };
+		84824A1D26D6F5E00087E673 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84824A1C26D6F5E00087E673 /* CodeView.swift */; };
 		96F2C052F9B387A46B2E61AB /* Pods_MarvelousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783B9D688658DA19DC1BBEF9 /* Pods_MarvelousTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		84824A0726D6E7E70087E673 /* MarvelousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84824A0B26D6E7E70087E673 /* MarvelousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelousUITests.swift; sourceTree = "<group>"; };
 		84824A0D26D6E7E70087E673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84824A1C26D6F5E00087E673 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		95423BB6577EEDA21F270173 /* Pods-Marvelous-MarvelousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelous-MarvelousUITests.debug.xcconfig"; path = "Target Support Files/Pods-Marvelous-MarvelousUITests/Pods-Marvelous-MarvelousUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1F0DF4B949B96B0D352B986 /* Pods-MarvelousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelousTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelousTests/Pods-MarvelousTests.release.xcconfig"; sourceTree = "<group>"; };
 		F30AFEB7B43A787DB54DDFFD /* Pods-Marvelous.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelous.debug.xcconfig"; path = "Target Support Files/Pods-Marvelous/Pods-Marvelous.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +101,6 @@
 				216B1455A69E4BBB7072DAF5 /* Pods-MarvelousTests.debug.xcconfig */,
 				C1F0DF4B949B96B0D352B986 /* Pods-MarvelousTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,12 +129,11 @@
 		848249E826D6E7E30087E673 /* Marvelous */ = {
 			isa = PBXGroup;
 			children = (
-				848249E926D6E7E30087E673 /* AppDelegate.swift */,
-				848249EB26D6E7E30087E673 /* SceneDelegate.swift */,
-				848249ED26D6E7E30087E673 /* ViewController.swift */,
-				848249F226D6E7E60087E673 /* Assets.xcassets */,
-				848249F426D6E7E60087E673 /* LaunchScreen.storyboard */,
+				84824A1E26D6F6310087E673 /* BaseConfigs */,
+				84824A1F26D6F6DF0087E673 /* Features */,
+				84824A2026D6F7060087E673 /* Helpers */,
 				848249F726D6E7E60087E673 /* Info.plist */,
+				848249F226D6E7E60087E673 /* Assets.xcassets */,
 			);
 			path = Marvelous;
 			sourceTree = "<group>";
@@ -154,6 +154,40 @@
 				84824A0D26D6E7E70087E673 /* Info.plist */,
 			);
 			path = MarvelousUITests;
+			sourceTree = "<group>";
+		};
+		84824A1926D6F5130087E673 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84824A1C26D6F5E00087E673 /* CodeView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84824A1E26D6F6310087E673 /* BaseConfigs */ = {
+			isa = PBXGroup;
+			children = (
+				848249E926D6E7E30087E673 /* AppDelegate.swift */,
+				848249EB26D6E7E30087E673 /* SceneDelegate.swift */,
+				848249F426D6E7E60087E673 /* LaunchScreen.storyboard */,
+			);
+			path = BaseConfigs;
+			sourceTree = "<group>";
+		};
+		84824A1F26D6F6DF0087E673 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				848249ED26D6E7E30087E673 /* ViewController.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		84824A2026D6F7060087E673 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84824A1926D6F5130087E673 /* Protocols */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FF3173BEA4406C8836E9E53A /* Frameworks */ = {
@@ -235,6 +269,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "Victor Oka";
 				TargetAttributes = {
 					848249E526D6E7E30087E673 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -406,6 +441,7 @@
 				848249EE26D6E7E30087E673 /* ViewController.swift in Sources */,
 				848249EA26D6E7E30087E673 /* AppDelegate.swift in Sources */,
 				848249EC26D6E7E30087E673 /* SceneDelegate.swift in Sources */,
+				84824A1D26D6F5E00087E673 /* CodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
