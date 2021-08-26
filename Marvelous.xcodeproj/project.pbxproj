@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		411DA54F2A04AFDE78D113B8 /* Pods_Marvelous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1A66376B68917E992F59E6 /* Pods_Marvelous.framework */; };
+		84163CC026D71279006DD0DE /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84163CBF26D71279006DD0DE /* StringKeys.swift */; };
+		84163CC326D714A2006DD0DE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84163CC226D714A2006DD0DE /* UIFont+Extension.swift */; };
+		846A678F26D7183F00686F7C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846A679126D7183F00686F7C /* Localizable.strings */; };
+		846A679426D7186000686F7C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 846A679626D7186000686F7C /* Localizable.strings */; };
 		8472237C50275C8B69375945 /* Pods_Marvelous_MarvelousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270946309DC65CD8868ACA10 /* Pods_Marvelous_MarvelousUITests.framework */; };
 		848249EA26D6E7E30087E673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848249E926D6E7E30087E673 /* AppDelegate.swift */; };
 		848249EC26D6E7E30087E673 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848249EB26D6E7E30087E673 /* SceneDelegate.swift */; };
@@ -44,6 +48,11 @@
 		5C57D8D557279FFD4A43088C /* Pods-Marvelous-MarvelousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelous-MarvelousUITests.release.xcconfig"; path = "Target Support Files/Pods-Marvelous-MarvelousUITests/Pods-Marvelous-MarvelousUITests.release.xcconfig"; sourceTree = "<group>"; };
 		783B9D688658DA19DC1BBEF9 /* Pods_MarvelousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F156BE1E6F8AF74E606C79 /* Pods-Marvelous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelous.release.xcconfig"; path = "Target Support Files/Pods-Marvelous/Pods-Marvelous.release.xcconfig"; sourceTree = "<group>"; };
+		84163CB726D71095006DD0DE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		84163CBF26D71279006DD0DE /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
+		84163CC226D714A2006DD0DE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		846A679026D7183F00686F7C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		846A679526D7186000686F7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		848249E626D6E7E30087E673 /* Marvelous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvelous.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848249E926D6E7E30087E673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848249EB26D6E7E30087E673 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +111,24 @@
 				C1F0DF4B949B96B0D352B986 /* Pods-MarvelousTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		84163CC126D71490006DD0DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84163CC226D714A2006DD0DE /* UIFont+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84163CCE26D716DF006DD0DE /* String */ = {
+			isa = PBXGroup;
+			children = (
+				84163CBF26D71279006DD0DE /* StringKeys.swift */,
+				846A679126D7183F00686F7C /* Localizable.strings */,
+				846A679626D7186000686F7C /* Localizable.strings */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		848249DD26D6E7E30087E673 = {
@@ -185,6 +212,8 @@
 		84824A2026D6F7060087E673 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84163CCE26D716DF006DD0DE /* String */,
+				84163CC126D71490006DD0DE /* Extensions */,
 				84824A1926D6F5130087E673 /* Protocols */,
 			);
 			path = Helpers;
@@ -291,6 +320,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 848249DD26D6E7E30087E673;
 			productRefGroup = 848249E726D6E7E30087E673 /* Products */;
@@ -310,6 +340,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				848249F626D6E7E60087E673 /* LaunchScreen.storyboard in Resources */,
+				846A679426D7186000686F7C /* Localizable.strings in Resources */,
+				846A678F26D7183F00686F7C /* Localizable.strings in Resources */,
 				848249F326D6E7E60087E673 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +470,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84163CC326D714A2006DD0DE /* UIFont+Extension.swift in Sources */,
+				84163CC026D71279006DD0DE /* StringKeys.swift in Sources */,
 				848249EE26D6E7E30087E673 /* ViewController.swift in Sources */,
 				848249EA26D6E7E30087E673 /* AppDelegate.swift in Sources */,
 				848249EC26D6E7E30087E673 /* SceneDelegate.swift in Sources */,
@@ -477,10 +511,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		846A679126D7183F00686F7C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846A679026D7183F00686F7C /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		846A679626D7186000686F7C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846A679526D7186000686F7C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		848249F426D6E7E60087E673 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				848249F526D6E7E60087E673 /* Base */,
+				84163CB726D71095006DD0DE /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -492,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -553,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
