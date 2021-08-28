@@ -24,11 +24,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let viewModel = CharacterListViewModel(delegate: self)
         setupView()
+        viewModel.fetch()
         // Do any additional setup after loading the view.
     }
 
 
+}
+
+extension ViewController: CharacterListViewModelDelegate {
+    func fetchCharactersSuccess(characters: [Character]) {
+        print("sucesso")
+    }
+    
+    func fetchCharactersFailure(error: String) {
+        print("falha")
+    }
 }
 
 extension ViewController: CodeView {
