@@ -15,19 +15,15 @@ protocol CharacterListViewModelDelegate {
 
 final class CharacterListViewModel {
     
-    var delegate: CharacterListViewModelDelegate
-    
-    init(delegate: CharacterListViewModelDelegate) {
-        self.delegate = delegate
-    }
+    var delegate: CharacterListViewModelDelegate?
     
     func fetch() {
         ServiceLayer.request(router: .getCharacters) { (result: Result<CharacterListResult, Error>)  in
             switch result {
             case .success(let characters):
-                print(characters.data.results)
+                self.delegate?.fetchCharactersSuccess(characters: characters.data.results)
             case .failure(let error):
-                self.delegate.fetchCharactersFailure(error: error.localizedDescription)
+                self.delegate?.fetchCharactersFailure(error: error.localizedDescription)
             }
         }
     }

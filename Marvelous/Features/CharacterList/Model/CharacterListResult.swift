@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Character List Result Model
 struct CharacterListResult: Codable {
     
     let code: Int
@@ -27,6 +28,7 @@ struct CharacterListResult: Codable {
     }
 }
 
+// MARK: - Character List Data Model
 struct CharacterListData: Codable {
     
     let offset: Int
