@@ -33,6 +33,7 @@ struct Constants {
             static let timeStamp = "ts"
             static let hash = "hash"
             static let nameStartsWith = "nameStartsWith"
+            static let offset = "offset"
         }
     }
 }

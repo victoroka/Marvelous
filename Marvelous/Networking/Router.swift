@@ -12,7 +12,7 @@ import CommonCrypto
 
 enum Router {
     
-    case getCharacters
+    case getCharacters(String?)
     case getCharactersByName(String?)
     
     var scheme: String {
@@ -45,8 +45,8 @@ enum Router {
     
     var parameters: [URLQueryItem] {
         switch self {
-        case .getCharacters:
-            return APIConfig.authenticationKeys()
+        case .getCharacters(let offset):
+            return APIConfig.authenticationKeys() + [URLQueryItem(name: Constants.Request.Parameters.offset, value: offset)]
         case .getCharactersByName(let query):
             return APIConfig.authenticationKeys() + [URLQueryItem(name: Constants.Request.Parameters.nameStartsWith, value: query)]
         }

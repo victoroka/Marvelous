@@ -12,7 +12,6 @@ import UIKit
 final class CharacterListViewController: UIViewController {
     
     private let viewModel: CharacterListViewModel
-    private var characters: [Character]?
     
     // MARK: Screen Components
     private let tableView = UITableView()
@@ -43,19 +42,18 @@ final class CharacterListViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(cellType: CharacterTableViewCell.self)
+        tableView.register(cellType: LoadingTableViewCell.self)
     }
     
     private func fetchCharacters() {
         viewModel.fetch()
     }
-    
 }
 
 // MARK: - Character List View Delegate Protocol
 extension CharacterListViewController: CharacterListViewModelDelegate {
     
-    func fetchCharactersSuccess(characters: [Character]) {
-        self.characters = characters
+    func fetchCharactersSuccess() {
         self.tableView.reloadData()
     }
     
@@ -68,14 +66,26 @@ extension CharacterListViewController: CharacterListViewModelDelegate {
 extension CharacterListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characters?.count ?? 0
+        return viewModel.characters.count
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.characters.count - 1 {
+            fetchCharacters()
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let data = characters?[indexPath.row] else { return UITableViewCell() }
-        let cell = tableView.dequeue(cell: CharacterTableViewCell.self, indexPath: indexPath)
-        cell.setup(with: data)
-        return cell
+        if indexPath.row == viewModel.characters.count - 1 {
+            let cell = tableView.dequeue(cell: LoadingTableViewCell.self, indexPath: indexPath)
+            cell.startAnimation()
+            return cell
+        } else {
+            let data = viewModel.characters[indexPath.row]
+            let cell = tableView.dequeue(cell: CharacterTableViewCell.self, indexPath: indexPath)
+            cell.setup(with: data)
+            return cell
+        }
     }
 }
 
