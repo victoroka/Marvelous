@@ -16,11 +16,16 @@ final class CharacterTableViewCell: UITableViewCell {
         return container
     }()
     
+    private lazy var characterImageView: UIImageView = {
+        let characterImageView = UIImageView()
+        return characterImageView
+    }()
+    
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.defaultBold(ofSize: 16)
-        label.textColor = .black
+        label.textColor = .lightGray
         return label
     }()
     
@@ -39,6 +44,7 @@ final class CharacterTableViewCell: UITableViewCell {
 
     func setup(with character: Character) {
         nameLabel.text = character.name
+        characterImageView.download(image: character.thumbnail.fullPath)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -51,7 +57,8 @@ final class CharacterTableViewCell: UITableViewCell {
 extension CharacterTableViewCell: CodeView {
     
     func buildViewHierarchy() {
-        containerView.addSubview(nameLabel)
+        containerView.addSubview(characterImageView)
+        characterImageView.addSubview(nameLabel)
         addSubview(containerView)
     }
     
@@ -64,11 +71,17 @@ extension CharacterTableViewCell: CodeView {
             make.centerX.equalToSuperview()
         }
         
+        characterImageView.snp.makeConstraints { (make) in
+            make.top.bottom.left.right.equalToSuperview()
+            make.centerX.centerY.equalToSuperview()
+        }
+        
         nameLabel.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.centerX.centerY.equalToSuperview()
         }
     }
     
-    func setupAdditionalConfigurarion() {}
+    func setupAdditionalConfigurarion() {
+        characterImageView.contentMode = .scaleAspectFit
+    }
 }

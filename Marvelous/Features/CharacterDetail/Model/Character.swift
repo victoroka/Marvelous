@@ -13,10 +13,12 @@ struct Character: Codable {
     let id: Int
     let name: String
     let description: String
+    let thumbnail: Thumbnail
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case description
+        case thumbnail
     }
 }

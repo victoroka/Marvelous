@@ -15,6 +15,7 @@ target 'Marvelous' do
   # Pods for Marvelous
   pod 'SnapKit', '~> 5.0.0'
   pod 'CryptoSwift'
+  pod 'Kingfisher'
 
   target 'MarvelousTests' do
     inherit! :search_paths
