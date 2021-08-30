@@ -18,28 +18,28 @@ enum Router {
     var scheme: String {
         switch self {
         case .getCharacters, .getCharactersByName:
-            return "https"
+            return Constants.Request.scheme
         }
     }
     
     var host: String {
         switch self {
         case .getCharacters, .getCharactersByName:
-            return "gateway.marvel.com"
+            return Constants.Request.host
         }
     }
     
     var path: String {
         switch self {
         case .getCharacters, .getCharactersByName:
-            return "/v1/public/characters"
+            return Constants.Request.Path.getCharacters
         }
     }
     
     var method: String {
         switch self {
         case .getCharacters, .getCharactersByName:
-            return "GET"
+            return Constants.Request.Method.GET
         }
     }
     
@@ -48,7 +48,7 @@ enum Router {
         case .getCharacters:
             return APIConfig.authenticationKeys()
         case .getCharactersByName(let query):
-            return APIConfig.authenticationKeys() + [URLQueryItem(name: "nameStartsWith", value: query)]
+            return APIConfig.authenticationKeys() + [URLQueryItem(name: Constants.Request.Parameters.nameStartsWith, value: query)]
         }
     }
 }
@@ -62,8 +62,8 @@ fileprivate struct APIConfig {
     static let hash = "\(ts)\(privateKey)\(apiKey)".md5()
     
     static func authenticationKeys() -> [URLQueryItem] {
-        return [URLQueryItem(name: "apikey", value: APIConfig.apiKey),
-                URLQueryItem(name: "ts", value: APIConfig.ts),
-                URLQueryItem(name: "hash", value: APIConfig.hash)]
+        return [URLQueryItem(name: Constants.Request.Parameters.apiKey, value: APIConfig.apiKey),
+                URLQueryItem(name: Constants.Request.Parameters.timeStamp, value: APIConfig.ts),
+                URLQueryItem(name: Constants.Request.Parameters.hash, value: APIConfig.hash)]
     }
 }

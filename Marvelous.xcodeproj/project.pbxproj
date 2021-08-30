@@ -10,6 +10,9 @@
 		411DA54F2A04AFDE78D113B8 /* Pods_Marvelous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1A66376B68917E992F59E6 /* Pods_Marvelous.framework */; };
 		84163CC026D71279006DD0DE /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84163CBF26D71279006DD0DE /* StringKeys.swift */; };
 		84163CC326D714A2006DD0DE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84163CC226D714A2006DD0DE /* UIFont+Extension.swift */; };
+		841D702126DD3D7D0025186E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702026DD3D7D0025186E /* Constants.swift */; };
+		841D702226DD3D7D0025186E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702026DD3D7D0025186E /* Constants.swift */; };
+		841D702326DD3D7D0025186E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702026DD3D7D0025186E /* Constants.swift */; };
 		8447A41D26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */; };
 		8447A41E26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */; };
 		8447A41F26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */; };
@@ -73,6 +76,7 @@
 		84163CB726D71095006DD0DE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		84163CBF26D71279006DD0DE /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		84163CC226D714A2006DD0DE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		841D702026DD3D7D0025186E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		8447A42126DBCF1300C4EF7B /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
 		8447A42526DBFD9300C4EF7B /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				84163CBF26D71279006DD0DE /* StringKeys.swift */,
 				846A679126D7183F00686F7C /* Localizable.strings */,
 				846A679626D7186000686F7C /* Localizable.strings */,
+				841D702026DD3D7D0025186E /* Constants.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -569,6 +574,7 @@
 				8447A42626DBFD9300C4EF7B /* CharacterTableViewCell.swift in Sources */,
 				8481B65D26DAA2C800112D3A /* CharacterListViewModel.swift in Sources */,
 				8481B64C26DA9BFA00112D3A /* String+Extension.swift in Sources */,
+				841D702126DD3D7D0025186E /* Constants.swift in Sources */,
 				8447A42226DBCF1300C4EF7B /* CharacterListViewController.swift in Sources */,
 				84163CC326D714A2006DD0DE /* UIFont+Extension.swift in Sources */,
 				84163CC026D71279006DD0DE /* StringKeys.swift in Sources */,
@@ -596,6 +602,7 @@
 				8481B65426DA9C4400112D3A /* Character.swift in Sources */,
 				8481B65326DA9C1100112D3A /* UIFont+Extension.swift in Sources */,
 				84824A0126D6E7E70087E673 /* MarvelousTests.swift in Sources */,
+				841D702226DD3D7D0025186E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +615,7 @@
 				8447A42826DBFD9300C4EF7B /* CharacterTableViewCell.swift in Sources */,
 				84824A0C26D6E7E70087E673 /* MarvelousUITests.swift in Sources */,
 				8447A41F26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */,
+				841D702326DD3D7D0025186E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
