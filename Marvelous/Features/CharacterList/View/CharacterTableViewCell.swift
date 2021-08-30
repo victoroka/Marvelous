@@ -21,11 +21,16 @@ final class CharacterTableViewCell: UITableViewCell {
         return characterImageView
     }()
     
+    lazy var nameBackgroundView: UIView = {
+        let container = UIView(frame: .zero)
+        return container
+    }()
+    
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.defaultBold(ofSize: 16)
-        label.textColor = .lightGray
+        label.textColor = .red
         return label
     }()
     
@@ -58,30 +63,38 @@ extension CharacterTableViewCell: CodeView {
     
     func buildViewHierarchy() {
         containerView.addSubview(characterImageView)
-        characterImageView.addSubview(nameLabel)
+        nameBackgroundView.addSubview(nameLabel)
+        characterImageView.addSubview(nameBackgroundView)
         addSubview(containerView)
     }
     
     func setupConstraints() {
         containerView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview()
-            make.left.equalToSuperview()
-            make.right.equalToSuperview()
-            make.height.equalTo(50)
-            make.centerX.equalToSuperview()
+            make.top.bottom.left.right.equalToSuperview()
+            make.height.equalToSuperview()
+            make.centerX.centerY.equalToSuperview()
         }
         
         characterImageView.snp.makeConstraints { (make) in
             make.top.bottom.left.right.equalToSuperview()
+            make.height.equalToSuperview()
             make.centerX.centerY.equalToSuperview()
         }
         
+        nameBackgroundView.snp.makeConstraints { (make) in
+            make.bottom.left.right.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.25)
+        }
+        
         nameLabel.snp.makeConstraints { (make) in
-            make.centerX.centerY.equalToSuperview()
+            make.right.equalToSuperview().inset(16)
+            make.centerY.equalToSuperview()
         }
     }
     
     func setupAdditionalConfigurarion() {
-        characterImageView.contentMode = .scaleAspectFit
+        nameBackgroundView.backgroundColor = .white.withAlphaComponent(0.5)
+        characterImageView.contentMode = .scaleAspectFill
+        characterImageView.clipsToBounds = true
     }
 }

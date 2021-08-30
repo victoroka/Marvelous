@@ -65,6 +65,10 @@ extension CharacterListViewController: CharacterListViewModelDelegate {
 // MARK: - UITableView Protocols
 extension CharacterListViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.characters.count
     }
