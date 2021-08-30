@@ -1,27 +1,24 @@
 //
-//  CharacterTableViewCell.swift
+//  LoadingTableViewCell.swift
 //  Marvelous
 //
-//  Created by Victor Oka on 29/08/21.
+//  Created by Victor Oka on 30/08/21.
 //  Copyright © 2021 Victor Oka. All rights reserved.
 //
 
 import UIKit
 
-final class CharacterTableViewCell: UITableViewCell {
-
+final class LoadingTableViewCell: UITableViewCell {
+    
     // MARK: Cell Components
     private lazy var containerView: UIView = {
         let container = UIView(frame: .zero)
         return container
     }()
     
-    lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = UIFont.defaultBold(ofSize: 16)
-        label.textColor = .black
-        return label
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(frame: .zero)
+        return activityIndicator
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -33,25 +30,14 @@ final class CharacterTableViewCell: UITableViewCell {
         fatalError(Constants.initFatalErrorDefaultMessage)
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func startAnimation() {
+        activityIndicator.startAnimating()
     }
-
-    func setup(with character: Character) {
-        nameLabel.text = character.name
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
 }
 
-// MARK: - Character Table View Cell Code View Protocol
-extension CharacterTableViewCell: CodeView {
-    
+extension LoadingTableViewCell: CodeView {
     func buildViewHierarchy() {
-        containerView.addSubview(nameLabel)
+        containerView.addSubview(activityIndicator)
         addSubview(containerView)
     }
     
@@ -64,11 +50,15 @@ extension CharacterTableViewCell: CodeView {
             make.centerX.equalToSuperview()
         }
         
-        nameLabel.snp.makeConstraints { (make) in
+        activityIndicator.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
+            make.height.width.equalTo(15)
         }
     }
     
-    func setupAdditionalConfigurarion() {}
+    func setupAdditionalConfigurarion() {
+        containerView.backgroundColor = .clear
+        activityIndicator.color = .lightGray
+    }
 }

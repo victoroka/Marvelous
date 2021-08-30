@@ -13,6 +13,9 @@
 		841D702126DD3D7D0025186E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702026DD3D7D0025186E /* Constants.swift */; };
 		841D702226DD3D7D0025186E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702026DD3D7D0025186E /* Constants.swift */; };
 		841D702326DD3D7D0025186E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702026DD3D7D0025186E /* Constants.swift */; };
+		841D702526DD47960025186E /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702426DD47960025186E /* LoadingTableViewCell.swift */; };
+		841D702626DD47960025186E /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702426DD47960025186E /* LoadingTableViewCell.swift */; };
+		841D702726DD47960025186E /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702426DD47960025186E /* LoadingTableViewCell.swift */; };
 		8447A41D26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */; };
 		8447A41E26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */; };
 		8447A41F26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */; };
@@ -77,6 +80,7 @@
 		84163CBF26D71279006DD0DE /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		84163CC226D714A2006DD0DE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		841D702026DD3D7D0025186E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		841D702426DD47960025186E /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		8447A42126DBCF1300C4EF7B /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
 		8447A42526DBFD9300C4EF7B /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 			children = (
 				8447A42126DBCF1300C4EF7B /* CharacterListViewController.swift */,
 				8447A42526DBFD9300C4EF7B /* CharacterTableViewCell.swift */,
+				841D702426DD47960025186E /* LoadingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				8481B65D26DAA2C800112D3A /* CharacterListViewModel.swift in Sources */,
 				8481B64C26DA9BFA00112D3A /* String+Extension.swift in Sources */,
 				841D702126DD3D7D0025186E /* Constants.swift in Sources */,
+				841D702526DD47960025186E /* LoadingTableViewCell.swift in Sources */,
 				8447A42226DBCF1300C4EF7B /* CharacterListViewController.swift in Sources */,
 				84163CC326D714A2006DD0DE /* UIFont+Extension.swift in Sources */,
 				84163CC026D71279006DD0DE /* StringKeys.swift in Sources */,
@@ -594,6 +600,7 @@
 				8481B65126DA9C0800112D3A /* Router.swift in Sources */,
 				8481B65B26DA9F4800112D3A /* ServiceLayer.swift in Sources */,
 				8447A42326DBCF1300C4EF7B /* CharacterListViewController.swift in Sources */,
+				841D702626DD47960025186E /* LoadingTableViewCell.swift in Sources */,
 				8447A41E26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */,
 				8481B64D26DA9BFA00112D3A /* String+Extension.swift in Sources */,
 				8447A42726DBFD9300C4EF7B /* CharacterTableViewCell.swift in Sources */,
@@ -613,6 +620,7 @@
 				8447A42426DBCF1300C4EF7B /* CharacterListViewController.swift in Sources */,
 				8481B64E26DA9BFB00112D3A /* String+Extension.swift in Sources */,
 				8447A42826DBFD9300C4EF7B /* CharacterTableViewCell.swift in Sources */,
+				841D702726DD47960025186E /* LoadingTableViewCell.swift in Sources */,
 				84824A0C26D6E7E70087E673 /* MarvelousUITests.swift in Sources */,
 				8447A41F26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */,
 				841D702326DD3D7D0025186E /* Constants.swift in Sources */,
