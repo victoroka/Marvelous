@@ -10,18 +10,40 @@ import UIKit
 
 extension UIFont {
     
-    private static func customFont(name: String, size: CGFloat) -> UIFont {
-        let font = UIFont(name: name, size: size)
-        assert(font != nil, "Can't load font: \(name)")
-        return font ?? UIFont.systemFont(ofSize: size)
+    static func customFont(type: FontType, size: CGFloat) -> UIFont {
+        guard let font = UIFont(name: type.getName(), size: size) else {
+            return UIFont.systemFont(ofSize: size, weight: type.getWeight())
+        }
+        return font
     }
     
-    static func defaultRegular(ofSize size: CGFloat) -> UIFont {
-        return customFont(name: "Avenir-Medium", size: size)
+}
+
+enum FontType {
+    
+    case avenirLight
+    case avenirMedium
+    case avenirBlack
+    
+    func getName() -> String {
+        switch self {
+        case .avenirLight:
+            return "Avenir-Light"
+        case .avenirMedium:
+            return "Avenir-Medium"
+        case .avenirBlack:
+            return "Avenir-Black"
+        }
     }
     
-    static func defaultBold(ofSize size: CGFloat) -> UIFont {
-        return customFont(name: "Avenir-Black", size: size)
+    func getWeight() -> UIFont.Weight {
+        switch self {
+        case .avenirLight:
+            return .light
+        case .avenirMedium:
+            return .medium
+        case .avenirBlack:
+            return .black
+        }
     }
-    
 }

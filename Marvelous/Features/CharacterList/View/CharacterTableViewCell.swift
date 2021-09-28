@@ -29,7 +29,7 @@ final class CharacterTableViewCell: UITableViewCell {
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont.defaultBold(ofSize: 16)
+        label.font = .customFont(type: .avenirBlack, size: 16)
         label.textColor = .red
         return label
     }()
