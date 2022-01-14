@@ -11,28 +11,11 @@ import UIKit
 final class CharacterTableViewCell: UITableViewCell {
 
     // MARK: Cell Components
-    private lazy var containerView: UIView = {
-        let container = UIView(frame: .zero)
-        return container
-    }()
+    private lazy var containerView: UIView = .init()
+    private lazy var characterImageView: UIImageView = .init()
     
-    private lazy var characterImageView: UIImageView = {
-        let characterImageView = UIImageView()
-        return characterImageView
-    }()
-    
-    lazy var nameBackgroundView: UIView = {
-        let container = UIView(frame: .zero)
-        return container
-    }()
-    
-    lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = .customFont(type: .avenirBlack, size: 16)
-        label.textColor = .red
-        return label
-    }()
+    lazy var nameBackgroundView: UIView = .init()
+    lazy var nameLabel: UILabel = .init()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -96,5 +79,9 @@ extension CharacterTableViewCell: CodeView {
         nameBackgroundView.backgroundColor = .white.withAlphaComponent(0.5)
         characterImageView.contentMode = .scaleAspectFill
         characterImageView.clipsToBounds = true
+        
+        nameLabel.numberOfLines = 0
+        nameLabel.font = .customFont(type: .avenirBlack, size: 16)
+        nameLabel.textColor = .red
     }
 }

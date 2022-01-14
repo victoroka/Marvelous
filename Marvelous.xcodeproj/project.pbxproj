@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		411DA54F2A04AFDE78D113B8 /* Pods_Marvelous.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1A66376B68917E992F59E6 /* Pods_Marvelous.framework */; };
+		840A41DF276A8F1B006F4E00 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A41DE276A8F1B006F4E00 /* StackViewController.swift */; };
 		84163CC026D71279006DD0DE /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84163CBF26D71279006DD0DE /* StringKeys.swift */; };
 		84163CC326D714A2006DD0DE /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84163CC226D714A2006DD0DE /* UIFont+Extension.swift */; };
 		841D702126DD3D7D0025186E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D702026DD3D7D0025186E /* Constants.swift */; };
@@ -36,6 +37,7 @@
 		846AFE5226D99A7F00100A44 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AFE5126D99A7F00100A44 /* Character.swift */; };
 		846AFE5526D9BD9C00100A44 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846AFE5426D9BD9C00100A44 /* Router.swift */; };
 		8472237C50275C8B69375945 /* Pods_Marvelous_MarvelousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270946309DC65CD8868ACA10 /* Pods_Marvelous_MarvelousUITests.framework */; };
+		84742288277CEEAB005D31B0 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84742287277CEEAB005D31B0 /* UIStackView+Extension.swift */; };
 		8481B64C26DA9BFA00112D3A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481B64B26DA9BFA00112D3A /* String+Extension.swift */; };
 		8481B64D26DA9BFA00112D3A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481B64B26DA9BFA00112D3A /* String+Extension.swift */; };
 		8481B64E26DA9BFB00112D3A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481B64B26DA9BFA00112D3A /* String+Extension.swift */; };
@@ -82,6 +84,7 @@
 		5C57D8D557279FFD4A43088C /* Pods-Marvelous-MarvelousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelous-MarvelousUITests.release.xcconfig"; path = "Target Support Files/Pods-Marvelous-MarvelousUITests/Pods-Marvelous-MarvelousUITests.release.xcconfig"; sourceTree = "<group>"; };
 		783B9D688658DA19DC1BBEF9 /* Pods_MarvelousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F156BE1E6F8AF74E606C79 /* Pods-Marvelous.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvelous.release.xcconfig"; path = "Target Support Files/Pods-Marvelous/Pods-Marvelous.release.xcconfig"; sourceTree = "<group>"; };
+		840A41DE276A8F1B006F4E00 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		84163CB726D71095006DD0DE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		84163CBF26D71279006DD0DE /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		84163CC226D714A2006DD0DE /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		846A679526D7186000686F7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		846AFE5126D99A7F00100A44 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		846AFE5426D9BD9C00100A44 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		84742287277CEEAB005D31B0 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		8481B64B26DA9BFA00112D3A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8481B65926DA9F4800112D3A /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		8481B65C26DAA2C800112D3A /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
@@ -159,6 +163,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		840A41DD276A8E11006F4E00 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				840A41DE276A8F1B006F4E00 /* StackViewController.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		84163CC126D71490006DD0DE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +178,7 @@
 				8481B64B26DA9BFA00112D3A /* String+Extension.swift */,
 				8447A41C26DBCCC300C4EF7B /* UITableView+Extension.swift */,
 				842A482726DD5ECB00B06142 /* UIImageView+Extension.swift */,
+				84742287277CEEAB005D31B0 /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +339,7 @@
 		84824A2026D6F7060087E673 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				840A41DD276A8E11006F4E00 /* Commons */,
 				84163CCE26D716DF006DD0DE /* String */,
 				84163CC126D71490006DD0DE /* Extensions */,
 				84824A1926D6F5130087E673 /* Protocols */,
@@ -597,11 +611,13 @@
 				84163CC026D71279006DD0DE /* StringKeys.swift in Sources */,
 				846AFE5226D99A7F00100A44 /* Character.swift in Sources */,
 				842A482826DD5ECB00B06142 /* UIImageView+Extension.swift in Sources */,
+				84742288277CEEAB005D31B0 /* UIStackView+Extension.swift in Sources */,
 				8481B65A26DA9F4800112D3A /* ServiceLayer.swift in Sources */,
 				848249EA26D6E7E30087E673 /* AppDelegate.swift in Sources */,
 				848249EC26D6E7E30087E673 /* SceneDelegate.swift in Sources */,
 				84824A1D26D6F5E00087E673 /* CodeView.swift in Sources */,
 				8447A41D26DBCCC300C4EF7B /* UITableView+Extension.swift in Sources */,
+				840A41DF276A8F1B006F4E00 /* StackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
