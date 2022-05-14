@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 // MARK: - Character List View Controller Class
 final class CharacterListViewController: UIViewController {

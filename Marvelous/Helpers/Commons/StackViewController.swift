@@ -14,6 +14,7 @@ protocol StackViewControllerProtocol {
     func insert(view: UIView, below: UIView)
     func insert(view: UIView, at: Int)
     func add(view: UIView)
+    func add(views: [UIView])
     func add(space: StackableSpaceView)
     func remove(view: UIView)
     func removeAllViews()
@@ -111,6 +112,14 @@ class StackViewController: UIViewController, StackViewControllerProtocol {
                 return
             }
             insert(view: view, below: last)
+        } else {
+            stackView.addArrangedSubview(view)
+        }
+    }
+    
+    func add(views: [UIView]) {
+        for customViews in views {
+            stackView.addArrangedSubview(customViews)
         }
     }
     
@@ -154,18 +163,17 @@ extension StackViewController: CodeView {
     
     func setupConstraints() {
         scrollView.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(offset.left)
-            make.right.equalToSuperview().inset(offset.right)
-            make.bottom.equalTo(stackView.snp.bottom).offset(offset.bottom)
+            make.left.right.top.bottom.width.equalToSuperview()
         }
         
         stackView.snp.makeConstraints { make in
-            make.left.right.top.width.equalToSuperview()
+            make.left.right.top.bottom.width.equalToSuperview()
         }
     }
     
     func setupAdditionalConfigurarion() {
         scrollView.bounces = bounces
+        scrollView.isScrollEnabled = true
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
