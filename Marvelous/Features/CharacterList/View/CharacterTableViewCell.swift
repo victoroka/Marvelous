@@ -31,9 +31,9 @@ final class CharacterTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func setup(with character: Character) {
-        nameLabel.text = character.name
-        characterImageView.download(image: character.thumbnail.fullPath)
+    func setup(with viewModel: CharacterTableViewCellViewModel) {
+        nameLabel.text = viewModel.getName()
+        characterImageView.download(image: viewModel.getImageFullPath())
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

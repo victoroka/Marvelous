@@ -8,22 +8,22 @@
 
 import Foundation
 
-protocol CharacterListViewModelDelegate {
+protocol CharacterListViewModelDelegate: AnyObject {
     func fetchCharactersSuccess()
     func fetchCharactersFailure(error: String)
 }
 
 final class CharacterListViewModel {
     
-    private(set) var characters: [Character] = [Character]()
-    private(set) var totalCharacters: Int = 0
+    private var characters: [Character] = [Character]()
+    private var totalCharacters: Int = 0
     private var offset: Int = 0
     private let limit: Int = 20
     
-    var delegate: CharacterListViewModelDelegate?
+    weak var delegate: CharacterListViewModelDelegate?
     
-    func fetch() {
-        ServiceLayer.request(router: .getCharacters(String(offset))) { (result: Result<CharacterListResult, Error>)  in
+    func fetch(service: MarvelRequestServiceProtocol = ServiceLayer.shared) {
+        service.request(router: .getCharacters(String(offset))) { (result: Result<CharacterListResult, Error>)  in
             switch result {
             case .success(let characterListResult):
                 self.characters += characterListResult.data.results
@@ -34,5 +34,9 @@ final class CharacterListViewModel {
                 self.delegate?.fetchCharactersFailure(error: error.localizedDescription)
             }
         }
+    }
+    
+    func getCharactersList() -> [Character] {
+        return characters
     }
 }

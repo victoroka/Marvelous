@@ -8,9 +8,17 @@
 
 import Foundation
 
-final class ServiceLayer {
+protocol MarvelRequestServiceProtocol {
+    func request<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ())
+}
+
+final class ServiceLayer: MarvelRequestServiceProtocol {
     
-    class func request<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ()) {
+    static let shared = ServiceLayer()
+    
+    private init() {}
+    
+    func request<T: Codable>(router: Router, completion: @escaping (Result<T, Error>) -> ()) {
         
         var components = URLComponents()
         components.scheme = router.scheme

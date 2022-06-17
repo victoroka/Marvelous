@@ -71,24 +71,26 @@ extension CharacterListViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.characters.count
+        return viewModel.getCharactersList().count
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.characters.count - 1 {
+        if indexPath.row == viewModel.getCharactersList().count - 1 {
             fetchCharacters()
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == viewModel.characters.count - 1 {
+        if indexPath.row == viewModel.getCharactersList().count - 1 {
             let cell = tableView.dequeue(cell: LoadingTableViewCell.self, indexPath: indexPath)
             cell.startAnimation()
             return cell
         } else {
-            let data = viewModel.characters[indexPath.row]
+            let charactersList = viewModel.getCharactersList()
+            let data = charactersList[indexPath.row]
+            let viewModel: CharacterTableViewCellViewModel = .init(character: data)
             let cell = tableView.dequeue(cell: CharacterTableViewCell.self, indexPath: indexPath)
-            cell.setup(with: data)
+            cell.setup(with: viewModel)
             return cell
         }
     }
